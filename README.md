@@ -21,7 +21,7 @@ This setup generates a supermassive black hole at the center with particles dist
 **Observation**
 In this scenario, the total energy remains stable and conserved. The system evolves naturally into a stable rotating disk, maintaining a plausible physical course of events.
 
-![Galaxy Gaussian Hole simulation](./images(galaxy_gaussian_hole.png)
+![Galaxy Gaussian Hole simulation](./images/galaxy_gaussian_hole.png)
 
 ### 2. Binary Orbiting and Box setup
 These configurations initialize particles either in a random box distribution or around two orbiting heavy masses.
