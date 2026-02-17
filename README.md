@@ -30,6 +30,6 @@ These configurations initialize particles either in a random box distribution or
 In these scenarios, you may observe non costant behaviour in the total energy graph. This behavior often indicates numerical instability caused by close interaction. 
 Unlike the stable galaxy setup, these initial situations often causes some particles to pass near the origin. In this case, since we have an interaction with a supermassive body, force explodes to infinity. Since the dt is fixed it's not small enough to capture the rapid acceleration, leading the integration method (Euler/Leapfrog) to produce numerical instability. 
 
-[IMAGES PATH]
-
+![Binary orbiting](./images/binary_orbiting.png)
+![Box_setup](/images/box_setup.png)
 
