@@ -10,3 +10,26 @@ The goal is to demonstrate how Python, typically considered slow for heavy compu
 * **Speed:** Achieves approximately **3.4ms per frame** with 20,000 bodies.
 * **Visualization:** Real-time rendering using Matplotlib with dynamic energy monitoring.
 * **Comparison:** The folder `Object Oriented Implementation/` contains a traditional recursive Python implementation. It struggles to simulate 1,000 bodies, demonstrating the improovements obtained by flattening data structures and using Numba.
+
+
+## Physical Observations
+The simulation includes an energy plot (Kinetic + Potential) to verify physical accuracy. Since the system is isolated, the Total Energy should stay constant.
+
+### 1. Galaxy gaussian hole
+This setup generates a supermassive black hole at the center with particles distributed in a Gaussian disk around it. Particles are initialized with Keplerian orbital velocities
+
+**Observation**
+In this scenario, the total energy remains stable and conserved. The system evolves naturally into a stable rotating disk, maintaining a plausible physical course of events.
+
+[IMAGE PATH]
+
+### 2. Binary Orbiting and Box setup
+These configurations initialize particles either in a random box distribution or around two orbiting heavy masses.
+
+**Observation**
+In these scenarios, you may observe non costant behaviour in the total energy graph. This behavior often indicates numerical instability caused by close interaction. 
+Unlike the stable galaxy setup, these initial situations often causes some particles to pass near the origin. In this case, since we have an interaction with a supermassive body, force explodes to infinity. Since the dt is fixed it's not small enough to capture the rapid acceleration, leading the integration method (Euler/Leapfrog) to produce numerical instability. 
+
+[IMAGES PATH]
+
+
